@@ -13,7 +13,7 @@ const Page: FC<pageProps> = ({}) => {
     setIsLoading(true)
     try {
       await signIn('google')
-    } catch (error) {
+    } catch (error: any) {
       // display error msg to user
       toast.error(error.message || 'something went wrong with your login')
     } finally {
